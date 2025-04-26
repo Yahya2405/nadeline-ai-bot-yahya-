@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nadeline AI - Golden Era</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #000000, #430000);
+            color: gold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            overflow: hidden;
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
+        .chatbox {
+            width: 90%;
+            max-width: 600px;
+            height: 70vh;
+            background: rgba(255, 215, 0, 0.05);
+            border: 2px solid gold;
+            border-radius: 20px;
+            padding: 20px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 15px gold;
+        }
+        .chatlog {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .user {
+            background-color: rgba(255, 255, 255, 0.1);
+            text-align: right;
+        }
+        .bot {
+            background-color: rgba(255, 215, 0, 0.1);
+            text-align: left;
+        }
+        .input-area {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        input[type="text"] {
+            width: 70%;
+            padding: 15px;
+            border-radius: 25px;
+            border: none;
+            margin-top: 10px;
+            font-size: 16px;
+            background: #222;
+            color: gold;
+            margin-right: 10px;
+        }
+        button {
+            padding: 15px 25px;
+            border-radius: 25px;
+            border: none;
+            background-color: gold;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #ffd700;
+        }
+        .loading {
+            font-style: italic;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🌟 Nadeline AI 🌟</h1>
+<div class="chatbox" id="chatbox"></div>
+
+<div class="input-area">
+    <input type="text" id="userInput" placeholder="Ask me anything...">
+    <button onclick="sendMessage()">Send</button>
+</div>
+
+<script>
+    const apiKey = "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"; // <<< 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
+    const nadelineInfo = `
+    The Earth weeps in silence as pollution and waste accumulate...
+    (The Earth weeps in silence as pollution and waste accumulate in our rivers and lakes, drowning the beauty of nature and threatening life within. The hushed warnings of an impending environmental crisis, encompassing plastic waste management, climate change, and biodiversity loss, are drowned out by our apathy. Yet, a day looms when our neglect will prove too much for the parched lands and fragile ecosystems to endure.
+I have a Question for a tought-
+HOW CAN CIVILIZATION AND TECHNOLOGY WORK TOGETHER WITHOUT HARMING NATURE?
+Sounds Impossible right??
+WE ARE MAKING THE IMPOSSIBLE POSSIBLE WITH “NADELIENE”- A RAY OF HOPE!!
+THIS IS A CIVILIZATION- WHERE NATURE AND TECHNOLOGY CAN GROW SIDE BY SIDE TO DEVELOP THE ECONOMY VIA SERVING COMPLETE JUSTICE TO ECOSYSTEM CONTRIBUTING FOR GOOD HEALTH & WELL BEING!!
+According to the United Nations, 68% of the world’s population will live in urban areas by 2050. In recognition of the need for time, we are aligning SDG goal number 11 and 13 with our creativity and introducing the plan for our sustainability city - “NADELIENE”- 
+“NADELIENE” is a city where sustainable infrastructure to urban farming is incorporated at best!!
+A city where nature is protected, emission is zero, and absolutely no waste!!!
+Let’s have a glance at the infrastructure of NADELIENE-
+GREEN SKY TOWERS AND ECO-HUBS  
+We have multiple constructions like residential towers, Schools, malls, Hospitals, parks, etc. wherein we have used sustainable architecture. We have used PBK7, also known as carbon black in constructions, as they improve the material's mechanical strength, robustness, and resistance to weathering and tear. By harnessing the growth of microalgae on rooftops of our green towers, we ensure efficient insulation and cooling, reducing energy consumption and lowering utility bills. 
+PURE ENERGY HOLDINGS
+At NADELIENE, we have an exclusive institution named Pure Energy Holdings, which will take responsibility for the energy requirements of the city. Major power resources are tidal and solar energy. 
+RADIANT ACRES 
+We have reserved acres of land named Radiant Acres, which is the solar garden of the city. 
+ECO-WHEELS TRANSPORT
+At NADELIENE, we have an Eco-wheel system that combines ZEVs and metro transit to create cleaner, efficient mobility reducing pollution and congestion while elevating urban livability.
+SUN-LANES & SOLAR-SCAPES
+At NADELIENE, we have a street system embedded with solar panels and, we promote cycle commute with an exclusive line to embrace healthy lifestyles.
+ECO-GROW DOMES
+Through exclusive eco-growing domes, which follow greenhouse agriculture we are enabling year-round resource-efficient cultivation of fresh produce for the citizens. We use processed organic manure and treated water for this irrigation setup.
+HYDRO-DOME SOLUTIONS
+We have an exclusive water desalination and distillation unit that would ensure an ample supply of water to the city. 
+BLUE CARBON BEDDING BY MANGROVE FORESTING
+Mangrove forest covers will act as natural filters for industrial effluents, and also capture massive amounts of carbon emissions from the atmosphere.  These trapped carbons will get buried in soils and remain stored underwater in coastal ecosystems for years. Climate impacts caused by carbon emissions can also be reduced via this.
+CARBO-CAPTURE CENTER
+This is a modern mechanism to make our city zero carbon. This unit absorbs the gas from the atmosphere and separates carbon dioxide using blue ammonia and blue hydrogen technology. The separated carbon dioxide will get compressed and transported via pipelines or ships and is injected into rock formations deep underground through various mines like coal for permanent storage.
+ENVIRO-CYCLE SYSTEM
+We have an advanced waste management unit called an enviro-cycle system, wherein all collected wastes are segregated into categories like plastic, glass, bio waste, and e-waste. E-waste and glass will go to industries that will use it as a raw material. However, all plastic wastes, we will take through a pyrolysis procedure and make charr and tar that could be used for the construction of buildings and roads. At the same time, we have an exclusive eco-digester unit that will process our bio-waste. Later with an exclusive unit, we will separate them into biogas, fertile water, and dry compost. 
+NAD-GUARD- THE PROMISE FOR YOUR TOMORROW
+NAD GAURD is an advanced AI driven monitoring system combining two robotic entities, Heli Bot and NAD Bot, to offer consistent living standards to our residents. NAD Bot patrols the city, addressing ground-level issues in infrastructure, agriculture, eco-hubs, and residential complexes. Heli Bot monitors atmospheric conditions and carbon emissions from the air, informing residents about their carbon footprint. 
+You might have noticed that the tagline of NADELIENE promises a better life today, tomorrow, and forever- 
+How is this happening?
+Let’s have a look at the key features of NADELIENE-
+RESOURCE EFFICIENCY
+We have built NADELIENE as green economy plan, where every ounce of material and energy is meticulously conserved and perfected ensuring a sustainable future not only for the future generation but also for our planet.
+NET ZERO EMISSION 
+NADELIENE is planned as a city with a zero-carbon policy. We have implemented multiple measures to not only minimize carbon emissions but also by absorbing excess carbon, we plan to achieve the title of a zero-carbon city. 
+CLEAN ENERGY
+We have reserved acres of land as radiant acres, which is the solar garden of the city. We also produce electricity from a well-established tidal power plant. 
+SUSTAINABLE AGRICULTURE
+We have incorporated multiple sustainable agricultural practices to ensure the supply of orgaic produces to contribute for good health and well being.
+RESILIENCE TO CLIMATE CHANGE 
+At NADELIENE, we have ensured the long-term well-being of communities and ecosystems by incorporating multiple interventions to reduce vulnerability and building robust infrastructures and policies to withstand and recover from the impacts of a warming planet.
+HEALTHY AND BALANCED LIVING SYSTEM
+At NADELIENE the foundation of healthy and balanced living is thoughtfully designed and nurtured. We encourage residents to embrace eco-friendly transportation, access fresh produce, engage in low-carbon economic activities, and follow active lifestyles fostering well-being while minimizing the ecological footprint.
+SDG GOALS IMPLEMENTED
+We have incorporated SDG GOAL NUMBER 6,7,9,11,12&13 in this green city masterplan. By incorporating these all, we are also satisfying goal number 3- Good Health and well-being for today, tomorrow, and forever as we stated in the tagline of NADELIENE.
+CONCLUSION
+We all are in A CALL FOR ACTION! We must BUILD OUR TOMORROW- TODAY!!
+Let’s embrace the high call for immediate action, to battle with all those that are a threat to making our earth a better place to live!!!
+Let’s build more cities like Nadeline, so that we all have a better place to live today, tomorrow, and forever)
+    `;
+
+    async function sendMessage() {
+        const input = document.getElementById("userInput");
+        const chatbox = document.getElementById("chatbox");
+        const userText = input.value.trim();
+        if (!userText) return;
+
+        addMessage("You", userText, "user");
+
+        input.value = "";
+
+        // Loading spinner
+        const loading = document.createElement("div");
+        loading.className = "chatlog bot loading";
+        loading.textContent = "Nadeline AI is typing...";
+        chatbox.appendChild(loading);
+        chatbox.scrollTop = chatbox.scrollHeight;
+
+        // Decide whether to answer about Nadeline or General
+        let promptText = "";
+
+        if (userText.toLowerCase().includes("nadeline") || userText.toLowerCase().includes("city") || userText.toLowerCase().includes("green") || userText.toLowerCase().includes("sustainable")) {
+            promptText = `You are a very smart AI. Only use this Nadeline info to answer:\n${nadelineInfo}\nUser asked: "${userText}"\nGive a detailed helpful answer.`;
+        } else {
+            promptText = `You are an AI like ChatGPT. Talk naturally, friendly, helpful. User asked: "${userText}".`;
+        }
+
+        try {
+            const response = await fetch("https://api.openai.com/v1/chat/completions", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${apiKey}`
+                },
+                body: JSON.stringify({
+                    model: "gpt-3.5-turbo",
+                    messages: [{ role: "user", content: promptText }],
+                    temperature: 0.7,
+                    max_tokens: 300
+                })
+            });
+
+            const data = await response.json();
+            const botReply = data.choices[0]?.message?.content.trim() || "Sorry, I couldn't find an answer.";
+
+            loading.remove();
+            typeWriter("Nadeline AI", botReply, "bot");
+        } catch (error) {
+            loading.remove();
+            typeWriter("Nadeline AI", "⚡ Error: Something went wrong. Please try again later.", "bot");
+            console.error(error);
+        }
+    }
+
+    function addMessage(sender, text, className) {
+        const chatbox = document.getElementById("chatbox");
+        const message = document.createElement("div");
+        message.className = `chatlog ${className}`;
+        message.innerHTML = `<b>${sender}:</b> ${text}`;
+        chatbox.appendChild(message);
+        chatbox.scrollTop = chatbox.scrollHeight;
+    }
+
+    function typeWriter(sender, text, className) {
+        const chatbox = document.getElementById("chatbox");
+        const message = document.createElement("div");
+        message.className = `chatlog ${className}`;
+        chatbox.appendChild(message);
+
+        let i = 0;
+        function typing() {
+            if (i < text.length) {
+                message.innerHTML = `<b>${sender}:</b> ${text.substring(0, i + 1)}`;
+                i++;
+                setTimeout(typing, 20);
+                chatbox.scrollTop = chatbox.scrollHeight;
+            }
+        }
+        typing();
+    }
+</script>
+
+</body>
+</html>
